@@ -1,0 +1,27 @@
+# services:
+#   api:
+#     image: nest-pnpm-docker
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#       target: deploy
+#     ports:
+#       - 3000:3000
+
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      # Only will build development stage from our dockerfile
+      target: build
+    volumes:
+      # - .:/usr/src/app
+      - .:/app
+      - /app/node_modules
+    # env_file:
+    # - .env
+    # Run a command against the development stage of the image
+    command: pnpm run start:dev
+    ports:
+      - 3000:3000
