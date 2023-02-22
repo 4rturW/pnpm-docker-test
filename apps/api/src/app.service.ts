@@ -1,10 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { helloBitches } from 'ntest';
+import { IUser } from '@gob/test';
 
 @Injectable()
 export class AppService {
   getHello(): string {
+    const user: IUser = {
+      name: 'Artur',
+      surname: 'Woźniak',
+    };
     // return 'Hello World! x';
-    return helloBitches;
+    return JSON.stringify(user);
+    // return test;
   }
 }

@@ -1,5 +1,6 @@
 {
-  "name": "ntest",
+  "type": "module",
+  "name": "@gob/test",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",

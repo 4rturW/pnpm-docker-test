@@ -11,7 +11,7 @@
 services:
   api:
     build:
-      dockerfile: Dockerfile
+      dockerfile: ./apps/api/Dockerfile
       context: .
       # Only will build development stage from our dockerfile
       target: build

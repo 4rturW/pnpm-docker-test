@@ -3,4 +3,4 @@ export interface IUser {
   surname: string;
 }
 
-export const helloBitches = "Hello Bitches!"
+export const test = "Hello Bitches!"
